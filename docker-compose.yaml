@@ -1,0 +1,14 @@
+services:
+  web:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: luis1213
+      POSTGRES_DB: filament
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres:/var/lib/postgresql/data
+volumes:
+  postgres:
