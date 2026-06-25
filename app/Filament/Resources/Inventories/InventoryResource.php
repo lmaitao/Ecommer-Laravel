@@ -48,8 +48,8 @@ class InventoryResource extends Resource
     {
         return [
             'index' => ListInventories::route('/'),
-            'create' => CreateInventory::route('/create'),
-            'edit' => EditInventory::route('/{record}/edit'),
+            //'create' => CreateInventory::route('/create'),
+            //'edit' => EditInventory::route('/{record}/edit'),
         ];
     }
 }
