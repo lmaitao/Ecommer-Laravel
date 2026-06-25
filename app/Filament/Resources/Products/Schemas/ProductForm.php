@@ -40,6 +40,7 @@ class ProductForm
                         TextInput::make('price')
                             ->label('Precio')
                             ->numeric()
+                            ->minValue(0)
                             ->prefix('CLP $')
                             ->required(),
                         Select::make('category_id')

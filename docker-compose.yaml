@@ -9,6 +9,17 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres:/var/lib/postgresql
-volumes:
-  postgres:
+      - ./postgres:/var/lib/postgresql/data
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql_container
+    environment:
+      MYSQL_ROOT_PASSWORD: luis1213
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: luis1213
+      MYSQL_DB: filament
+    ports:
+      - "3311:3311"
+    volumes:
+      - ./mysql:/var/lib/mysql/data
