@@ -11,7 +11,6 @@ use App\Models\Order;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use UnitEnum;
 
@@ -30,7 +29,7 @@ class OrderResource extends Resource
 
     protected static string|UnitEnum|null $navigationGroup = 'CRM';
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::CurrencyDollar;
+    protected static string|BackedEnum|null $navigationIcon = "heroicon-o-currency-dollar";
 
     public static function form(Schema $schema): Schema
     {
@@ -53,8 +52,8 @@ class OrderResource extends Resource
     {
         return [
             'index' => ListOrders::route('/'),
-            'create' => CreateOrder::route('/create'),
-            'edit' => EditOrder::route('/{record}/edit'),
+            //'create' => CreateOrder::route('/create'),
+            //'edit' => EditOrder::route('/{record}/edit'),
         ];
     }
 }

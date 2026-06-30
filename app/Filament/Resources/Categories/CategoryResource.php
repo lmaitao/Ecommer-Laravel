@@ -12,7 +12,6 @@ use BackedEnum;
 use UnitEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
 class CategoryResource extends Resource
@@ -25,7 +24,7 @@ class CategoryResource extends Resource
     protected static ?string $pluralLabel = 'Categorias';
     protected static ?string $slug = 'categorias';
     protected static string|UnitEnum|null $navigationGroup = 'Administración';
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = "heroicon-o-rectangle-stack";
 
     public static function form(Schema $schema): Schema
     {

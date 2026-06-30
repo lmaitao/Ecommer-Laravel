@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Facades\Auth;
 
 class Order extends Model
 {
@@ -15,6 +16,17 @@ class Order extends Model
         'total',
         'note',
     ];
+
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::creating(function (Order $order) {
+            if (empty($order->user_id)) {
+                $order->user_id = Auth::id();
+            }
+        });
+    }
 
     public function warehouse(): BelongsTo
     {

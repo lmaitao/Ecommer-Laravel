@@ -11,7 +11,6 @@ use App\Models\Inventory;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use UnitEnum;
 
@@ -25,7 +24,7 @@ class InventoryResource extends Resource
     protected static ?string $pluralLabel = 'Inventarios';
     protected static ?string $slug = 'inventarios';
     protected static string|UnitEnum|null $navigationGroup = 'Administración';
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::Clipboard;
+    protected static string|BackedEnum|null $navigationIcon = "heroicon-o-clipboard";
 
     public static function form(Schema $schema): Schema
     {

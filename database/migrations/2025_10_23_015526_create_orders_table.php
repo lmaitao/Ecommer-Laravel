@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('warehouse_id')->constrained()->nullOnDelete()->nullable();
             $table->foreignId('customer_id')->constrained()->nullOnDelete()->nullable();
             $table->foreignId('user_id')->constrained()->nullOnDelete()->nullable();
-            $table->decimal('total', 10, 2);
+            $table->decimal('total');
             $table->text('note')->nullable();
             $table->timestamps();
         });

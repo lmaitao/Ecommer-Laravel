@@ -11,7 +11,6 @@ use App\Models\Warehouse;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
-use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use UnitEnum;
 
@@ -25,7 +24,7 @@ class WarehouseResource extends Resource
     protected static ?string $pluralLabel = 'Almacenes';
     protected static ?string $slug = 'almacenes';
     protected static string|UnitEnum|null $navigationGroup = 'Administración';
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::BuildingStorefront;
+    protected static string|BackedEnum|null $navigationIcon = "heroicon-o-building-storefront";
 
     public static function form(Schema $schema): Schema
     {
