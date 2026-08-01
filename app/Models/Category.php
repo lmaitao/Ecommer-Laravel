@@ -9,21 +9,21 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Category extends Model
 {
-    protected $fillable = ['name', 'summary', 'slug'];
+  protected $fillable = ['name', 'summary', 'slug'];
 
-    protected static function booted()
-    {
-        static::creating(function ($category) {
-            $category->slug = Str::slug($category->name);
-        });
+  protected static function booted()
+  {
+    static::creating(function ($category) {
+      $category->slug = Str::slug($category->name);
+    });
 
-        static::updating(function ($category) {
-            $category->slug = Str::slug($category->name);
-        });
-    }
+    static::updating(function ($category) {
+      $category->slug = Str::slug($category->name);
+    });
+  }
 
-    public function products(): HasMany
-    {
-        return $this->hasMany(Product::class);
-    }
+  public function products(): HasMany
+  {
+    return $this->hasMany(Product::class);
+  }
 }
