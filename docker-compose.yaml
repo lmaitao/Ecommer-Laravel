@@ -9,7 +9,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./postgres:/var/lib/postgresql/data
+      - db_data:/var/lib/postgresql
 
   #mysql:
   # image: mysql:latest
