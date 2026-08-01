@@ -18,7 +18,7 @@ services:
       MYSQL_ROOT_PASSWORD: luis1213
       MYSQL_USER: admin
       MYSQL_PASSWORD: luis1213
-      MYSQL_DB: filament
+      MYSQL_DATABASE: filament
     ports:
       - "3311:3311"
     volumes:
