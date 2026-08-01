@@ -1,6 +1,6 @@
 services:
   web:
-    image: postgres:latest
+    image: postgres:18
     container_name: postgres_container
     environment:
       POSTGRES_USER: admin
@@ -11,15 +11,15 @@ services:
     volumes:
       - ./postgres:/var/lib/postgresql/data
 
-  mysql:
-    image: mysql:latest
-    container_name: mysql_container
-    environment:
-      MYSQL_ROOT_PASSWORD: luis1213
-      MYSQL_USER: admin
-      MYSQL_PASSWORD: luis1213
-      MYSQL_DATABASE: filament
-    ports:
-      - "3311:3311"
-    volumes:
-      - ./mysql:/var/lib/mysql/data
+  #mysql:
+  # image: mysql:latest
+  #container_name: mysql_container
+  #environment:
+  # MYSQL_ROOT_PASSWORD: luis12131
+  # MYSQL_USER: admin
+  # MYSQL_PASSWORD: luis1213
+  #MYSQL_DATABASE: filament
+  # ports:
+  # - "3311:3311"
+  #volumes:
+  # - ./mysql:/var/lib/mysql/data
